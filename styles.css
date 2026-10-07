@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Estilos personalizados (antes en index.html) ---- */
+
+/* Scrollbar con estética "tech" */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+/* Borde animado de las tarjetas */
+.animated-border-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.animated-border-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: conic-gradient(transparent, transparent, transparent, #22d3ee);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotateBorder 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.animated-border-card:hover::before {
+  opacity: 1;
+}
+.animated-border-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: #111827;
+  border-radius: inherit;
+  z-index: -1;
+}
+.bg-cyber-900.animated-border-card::after {
+  background: #0a0f1c;
+}
+
+@keyframes rotateBorder {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

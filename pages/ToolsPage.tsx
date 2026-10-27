@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hash, ChevronLeft, ArrowRight } from 'lucide-react';
+import { Hash, ChevronLeft, ArrowRight, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SectionTitle } from '../components/SectionTitle';
 import { TOOLS } from './tools/registry';
@@ -26,6 +26,20 @@ export const ToolsPage: React.FC = () => {
             subtitle="Utilidades de ciberseguridad hechas por mí, que se ejecutan directamente en tu navegador."
           />
         </div>
+
+        <a
+          href="https://github.com/martins25/herramientas-m4rtins"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="max-w-4xl mx-auto mb-10 flex items-center gap-4 rounded-2xl border border-slate-700 bg-cyber-800 px-5 py-4 hover:border-cyber-400/60 transition-colors group"
+        >
+          <Github className="w-7 h-7 text-cyber-400 shrink-0" />
+          <span className="text-sm text-slate-300">
+            <b className="text-white">Código abierto.</b> Todas estas herramientas procesan tus datos en tu
+            navegador, sin enviarlos a ningún servidor. ¿No te fías? Audita el código tú mismo en GitHub.
+          </span>
+          <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-cyber-400 transition-colors ml-auto shrink-0" />
+        </a>
 
         <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
           {TOOLS.map((tool) => {

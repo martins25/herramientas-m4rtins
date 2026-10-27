@@ -1,4 +1,4 @@
-import { KeyRound, Globe, VenetianMask, ShieldAlert, Network, FileKey, Hash, Binary, Stamp, type LucideIcon } from 'lucide-react';
+import { KeyRound, Globe, VenetianMask, ShieldAlert, Network, FileKey, Hash, Binary, Stamp, FileLock2, type LucideIcon } from 'lucide-react';
 
 export interface ToolMeta {
   /** Slug amigable para SEO; forma la URL /herramientas/<slug> */
@@ -25,6 +25,15 @@ export const TOOLS: ToolMeta[] = [
       'Protege la copia de tu DNI antes de darla: añádele una marca de agua con el destinatario y la finalidad (hotel, trabajo, trámites). 100% en tu navegador, la imagen no se sube.',
     tags: ['Privacidad', 'DNI', 'Identidad'],
     icon: Stamp,
+    status: 'live',
+  },
+  {
+    slug: 'cifrar-archivos',
+    title: 'Cifrar Archivos',
+    description:
+      'Cifra y descifra archivos y documentos con AES-256-GCM + Argon2id y obtén su checksum SHA-256. Todo en tu navegador: nada se sube a ningún servidor.',
+    tags: ['Cifrado', 'Archivos', 'Privacidad'],
+    icon: FileLock2,
     status: 'live',
   },
   {

@@ -13,6 +13,7 @@ const GeneradorHashesPage = lazy(() => import('./pages/tools/GeneradorHashesPage
 const Base64UrlPage = lazy(() => import('./pages/tools/Base64UrlPage').then((m) => ({ default: m.Base64UrlPage })));
 const JwtDecoderPage = lazy(() => import('./pages/tools/JwtDecoderPage').then((m) => ({ default: m.JwtDecoderPage })));
 const MarcaAguaDniPage = lazy(() => import('./pages/tools/MarcaAguaDniPage').then((m) => ({ default: m.MarcaAguaDniPage })));
+const CifrarArchivosPage = lazy(() => import('./pages/tools/CifrarArchivosPage').then((m) => ({ default: m.CifrarArchivosPage })));
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ const App: React.FC = () => {
             <Route path="/herramientas/generador-de-hashes" element={<GeneradorHashesPage />} />
             <Route path="/herramientas/base64-url-encode-decode" element={<Base64UrlPage />} />
             <Route path="/herramientas/marca-de-agua-dni" element={<MarcaAguaDniPage />} />
+            <Route path="/herramientas/cifrar-archivos" element={<CifrarArchivosPage />} />
             <Route path="*" element={<Navigate to="/herramientas" replace />} />
           </Routes>
         </Suspense>

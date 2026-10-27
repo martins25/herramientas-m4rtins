@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 
 const SITE = 'https://m4rtins.com';
-const REPO = 'https://github.com/'; // ← sustituye por la URL de tu repositorio
+const REPO = 'https://github.com/martins25/herramientas-m4rtins';
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
